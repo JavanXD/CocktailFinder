@@ -12,6 +12,12 @@ if (mysqli_connect_errno())
     exit;
 }
 
+/* change character set to utf8 */
+if (!$mysqli->set_charset("utf8")) {
+    printf("Error loading character set utf8: %s\n", $mysqli->error);
+    exit();
+}
+
 function close_mysql($mysqli)
 {
     $mysqli->close();

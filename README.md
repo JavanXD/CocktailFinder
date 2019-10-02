@@ -11,6 +11,7 @@ Deutsch (German):
 
 ## Try it live
 * Try it [LIVE](https://cocktailfinder.yaaw.de/).
+* The Admin-Interface which is used to add new cocktails into the list is located at `https://cocktailfinder.yaaw.de/add.html`
 
 ## Used technologies
 * PHP used for back-end
@@ -20,7 +21,7 @@ Deutsch (German):
 ## Setup CocktailFinder on your local machine 
 
 1. Create MySql Database. Import `\docs\Database\cocktail.sql`
-2. Create `secrets.php` into `\core`.
+2. Create `secrets.php` into `\core\`:
     ```
     <?php
     // MySql secrets
@@ -36,7 +37,7 @@ Deutsch (German):
     //$cors = '*'; // only for testing purposes
     $cors = 'https://cocktailfinder.yaaw.de/';
     ```
-3. Check `url` variable within `\assets\js\app.js` to locate the running backend.
+3. Check `url` variable within `\assets\js\app.js` and `\assets\js\add.js` to locate the running backend.
 
 ## Securing this application
 1. Change CORS-Headers to your domain.
