@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>CocktailFinder - Cocktails</title>
+
+    <meta name="author" content="Javan Rasokat">
+    <meta name="robots" content="noindex" />
+
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/sources/bootstrap4/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="assets/sources/bootstrap3/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/sources/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="assets/sources/fontawesome/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg">
+<!-- AJAX Loader: shows that the page is still loading -->
+<div class="loader"><i class="loader_html fa-spin"></i></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-11 col-lg-9 col-xl-8 jumbotron app">
+            <div class="fill-height">
+                <a href="index.html" class="pull-right">Zurück zur Startseite</a>
+                <h4 class="display-4">Cocktail hinzufügen</h4>
+                <hr class="my-12 soften">
+                <input type="text" name="askForPassword" id="askForPassword" placeholder="Admin-Passwort" />
+                <form onsubmit="return addCocktail(this, document.getElementById('askForPassword').value);">
+                    <button type=submit onclick="return false;" style="display:none;"></button>
+                    <p>
+                        Cocktail Name:
+                        <input type="text" name="Name" class="form-control"/>
+                    </p>
+                    Zutaten:<br />
+                    <div class="col-7 pull-left">
+                        <input type="text" name="Zutat" class="zutat"/>
+                    </div>
+                    <div class="col-5 pull-right">
+                        Menge: <input type="text" name="Menge" class="form-control" style="width:100px;display:inline-block;"/>
+                    </div><div class="clearfix"></div>
+                    <div class="col-7 pull-left">
+                        <input type="text" name="Zutat" class="zutat"/>
+                    </div>
+                    <div class="col-5 pull-right">
+                        Menge: <input type="text" name="Menge" class="form-control" style="width:100px;display:inline-block;"/>
+                    </div><div class="clearfix"></div>
+                    <div class="col-7 pull-left">
+                        <input type="text" name="Zutat" class="zutat"/>
+                    </div>
+                    <div class="col-5 pull-right">
+                        Menge: <input type="text" name="Menge" class="form-control" style="width:100px;display:inline-block;"/>
+                    </div><div class="clearfix"></div>
+                    <div class="col-7 pull-left">
+                        <input type="text" name="Zutat" class="zutat"/>
+                    </div>
+                    <div class="col-5 pull-right">
+                        Menge: <input type="text" name="Menge" class="form-control" style="width:100px;display:inline-block;"/>
+                    </div><div class="clearfix"></div>
+                    <div class="col-7 pull-left">
+                        <input type="text" name="Zutat" class="zutat"/>
+                    </div>
+                    <div class="col-5 pull-right">
+                        Menge: <input type="text" name="Menge" class="form-control" style="width:100px;display:inline-block;"/>
+                    </div><div class="clearfix"></div>
+                    <div class="col-7 pull-left">
+                        <input type="text" name="Zutat" class="zutat"/>
+                    </div>
+                    <div class="col-5 pull-right">
+                        Menge: <input type="text" name="Menge" class="form-control" style="width:100px;display:inline-block;"/>
+                    </div><div class="clearfix"></div>
+                    <div class="col-7 pull-left">
+                        <input type="text" name="Zutat" class="zutat"/>
+                    </div>
+                    <div class="col-5 pull-right">
+                        Menge: <input type="text" name="Menge" class="form-control" style="width:100px;display:inline-block;"/>
+                    </div><div class="clearfix"></div>
+
+                    <p>
+                        Beschreibung:
+                        <textarea name="Kommentar" class="form-control"></textarea>
+                    </p>
+                    <input type="reset" class="btn btn-secondary" value="Reset" onclick="$('.zutat').tagsinput('removeAll');" />
+                    <input type="submit" class="btn btn-primary pull-right" value="Speichern" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/sources/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="assets/sources/bootstrap4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/sources/bootstrap-typeahead/typeahead.bundle.js"></script>
+<script type="text/javascript" src="assets/sources/angular.js/angular.min.js"></script>
+<script type="text/javascript" src="assets/sources/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+<script type="text/javascript" src="assets/sources/bootstrap-tagsinput/bootstrap-tagsinput-angular.min.js"></script>
+<script type="text/javascript" src="assets/js/add.js"></script>
+</body>
+</html>

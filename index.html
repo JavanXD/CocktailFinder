@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>CocktailFinder</title>
+
+        <meta name="author" content="Javan Rasokat">
+        <meta name="description" content="Zeigt dir Cocktail-Rezepte anhand deiner ausgewählten Zutaten.">
+
+        <meta name="viewport" content="width=device-width">
+        <meta name="theme-color" content="#FFE680" />
+
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="assets/sources/bootstrap4/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="assets/sources/bootstrap3/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/sources/bootstrap-tagsinput/bootstrap-tagsinput.css">
+        <link rel="stylesheet" href="assets/sources/fontawesome/css/font-awesome.min.css" >
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body class="bg">
+    <!-- AJAX Loader: shows that the page is still loading -->
+    <div class="loader"><i class="loader_html fa-spin"></i></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-11 col-lg-9 col-xl-8 jumbotron app">
+                <div class="fill-height">
+                    <img src="assets/img/logo.svg" class="img-responsive pull-left hidden-xs-down" alt="" width="60" height="60"/>
+                    <h3 class="display-3">CocktailFinder</h3>
+                    <div class="clearfix"></div>
+                    <p class="lead">Finde passende Cocktails zu deinen Zutaten.</p>
+                    <hr class="my-12 soften">
+                    <div>
+                        <ul class="nav nav-pills nav-fill">
+                            <li class="nav-item">
+                                <a class="nav-link label-primary text-white" href="javascript:void(0)" onclick="showList(0)"><i class="fa fa-search" aria-hidden="true"></i> Cocktail Suche</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link label-danger text-white" href="javascript:void(0)" onclick="showList(2)"><i class="fa fa-heart-o" aria-hidden="true"></i> Favorisierte Cocktails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link label-default text-white" href="javascript:void(0)" onclick="showList(1)"><i class="fa fa-ban" aria-hidden="true"></i> Ausgeblendete Cocktails</a>
+                            </li>
+                        </ul>
+                        <br>
+                    </div>
+                    <input type="text" id="filter" />
+                    <p>
+                    <div class="alert alert-info col-12 list-empty" style="display:hidden;">
+                        <strong><i class="fa fa-info-circle" aria-hidden="true"></i></strong> Du hast keine Cocktails markiert.
+                    </div>
+                    <div class="alert alert-info col-12 list-zutaten" style="display:hidden;">
+                        <strong><i class="fa fa-info-circle" aria-hidden="true"></i></strong> Wähle Zutaten aus um Cocktail-Vorschläge anzuzeigen.
+                    </div>
+                    <div id="cocktails" class="small">
+                    </div>
+                    <hr class="my-12 soften">
+                    <div class="text-center">
+                        <br >
+                        <p class="lead">Teile CocktailFinder mit deinen Freunden!</p>
+                        <a href="WhatsApp://send?text=https://cocktailfinder.yaaw.de - Zeigt dir Cocktail-Rezepte anhand deiner ausgewählten Zutaten." class="btn btn-success">
+                            <i class="fa fa-2x fa-whatsapp text-white" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://cocktailfinder.yaaw.de" target="_blank" class="btn btn-primary" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                            <i class="fa fa-2x fa-facebook-f text-white" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url=https://cocktailfinder.yaaw.de" target="_blank" class="btn btn-info" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                            <i class="fa fa-2x fa-twitter text-white" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://plus.google.com/share?url=https://cocktailfinder.yaaw.de" class="btn btn-danger" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                            <i class="fa fa-2x fa-google-plus text-white" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/sources/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/sources/bootstrap4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/sources/bootstrap-typeahead/typeahead.bundle.js"></script>
+    <script type="text/javascript" src="assets/sources/angular.js/angular.min.js"></script>
+    <script type="text/javascript" src="assets/sources/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    <script type="text/javascript" src="assets/sources/bootstrap-tagsinput/bootstrap-tagsinput-angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    </body>
+</html>

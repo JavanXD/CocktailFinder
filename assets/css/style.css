@@ -1,0 +1,121 @@
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #1d1e1f;
+    height: 100%;
+    overflow-y: scroll;
+}
+body.bg {
+    background-color:#4b5257;
+}
+.app {
+    background-color: rgba(253,247,247,0.86);
+    margin: 10px auto;
+}
+#cocktails {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.fill-height {
+    min-height: 300px;
+    height: 100%;
+}
+hr.soften {
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.8), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.8), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.8), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.8), rgba(0,0,0,0));
+    border: 0;
+}
+.loader {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+    opacity:0.5;
+    display: none;
+}
+.loader_html {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    border-right-color: rgba(0, 0, 0, 0) !important;
+    border-style: solid;
+    border-width: 8px;
+    height: 50px;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    position: fixed;
+    top: 50%;
+    width: 50px;
+    color: #336699;
+}
+
+
+.bootstrap-tagsinput {
+    width: 100%;
+}
+
+.accordion {
+    margin-bottom:-3px;
+}
+
+.accordion-group {
+    border: none;
+}
+
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+    margin-bottom: 0;
+}
+
+.twitter-typeahead .tt-hint
+{
+    display: none;
+}
+
+.tt-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    cursor: pointer;
+}
+
+.tt-suggestion {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333333;
+    white-space: nowrap;
+}
+
+.tt-suggestion:hover,
+.tt-suggestion:focus,
+.tt-cursor {
+    color: #ffffff;
+    text-decoration: none;
+    outline: 0;
+    background-color: #428bca;
+}
+.label-selectbar {
+    border:1px solid darkslategrey;
+    border-style: dashed;
+}
