@@ -2,8 +2,7 @@
 
 require_once ('secrets.php');
 
-$mysqli = mysqli_connect($host, $user, $password, $database, 3306);
-unset ($user, $password);
+$mysqli = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, 3306);
 
 // Check connection
 if (mysqli_connect_errno())

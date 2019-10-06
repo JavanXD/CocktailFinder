@@ -2,7 +2,7 @@
 
 require_once ('../secrets.php');
 header('Content-type:application/json;charset=utf-8');
-header("Access-Control-Allow-Origin: $cors");
+header("Access-Control-Allow-Origin: " . CORS);
 
 require_once ('../mysql.php');
 

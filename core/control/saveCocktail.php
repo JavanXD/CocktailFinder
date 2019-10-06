@@ -2,7 +2,7 @@
 
 require_once ('../secrets.php');
 header('Content-type:application/json;charset=utf-8');
-header("Access-Control-Allow-Origin: $cors");
+header("Access-Control-Allow-Origin: " . CORS);
 
 require_once ('../mysql.php');
 
@@ -10,9 +10,7 @@ require_once ('../mysql.php');
 $cocktail = $_REQUEST['cocktail'];
 $cocktail = json_decode($cocktail, true);
 
-$usedPassword = $_POST['password'];
-
-if ($usedPassword === $saveCocktailPassword) {
+if (isset($_POST['password']) && $_POST['password'] === ADMIN_PASSWORD) {
 
     if ($cocktail != null && $cocktail != "") {
 

@@ -25,20 +25,18 @@ Deutsch (German):
     ```
     <?php
     // MySql secrets
-    $host = "localhost";
-    $user = "root";
-    $password = "password";
-    $database = "database";
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'DB_USER');
+    define('DB_PASSWORD', 'DB_PASSWORD');
+    define('DB_DATABASE', 'DB_DATABASE');
     
-    // Admin-Interface password
-    $saveCocktailPassword = 'chooseaverysavepassword';
-    
-    // Allowed CORS-URL
-    //$cors = '*'; // only for testing purposes
-    $cors = 'https://cocktailfinder.yaaw.de/';
+    // Common
+    define('CORS', 'https://cocktailfinder.yaaw.de');
+    define('ADMIN_PASSWORD', 'ADMIN_PASSWORD');
+    ?>
     ```
 3. Check `url` variable within `\assets\js\app.js` and `\assets\js\add.js` to locate the running backend.
 
 ## Securing this application
 1. Change CORS-Headers to your domain.
-2. Disallow calling or remove completely `\core\control\saveCocktail.php` or set a very strong password.
+2. Disallow calling, remove completely `\core\control\saveCocktail.php` or set a very strong `ADMIN_PASSWORD.
