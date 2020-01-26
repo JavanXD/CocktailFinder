@@ -39,4 +39,5 @@ Deutsch (German):
 
 ## Securing this application
 1. Change CORS-Headers to your domain.
-2. Disallow calling, remove completely `\core\control\saveCocktail.php` or set a very strong `ADMIN_PASSWORD.
+2. Disallow calling, remove completely `\core\control\saveCocktail.php` or set a very strong `ADMIN_PASSWORD`.
+
